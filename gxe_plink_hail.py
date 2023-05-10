@@ -44,6 +44,7 @@ covariates_to_use = ["PRS"]
 gwas = hl.linear_regression_rows(
     y=mt.BMI_imp, 
     x=mt.GxE,
-    covariates=[1] + [mt[x] for x in covariates_to_use])
+    covariates=[1] + [mt[x] for x in covariates_to_use],
+    pass_through=[mt.rsid])
 
-gwas.export(f'/well/lindgren/barney/gxe/data/gwas_{chrom}.tsv.bgz')
+gwas.export(f'/well/lindgren/dpalmer/gwas_test.tsv.bgz')
