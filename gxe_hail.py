@@ -50,4 +50,4 @@ mt = mt.filter_rows(
 mt.count()
 
 # Write to plink
-hl.export_plink(mt, "/well/lindgren/UKBIOBANK/dpalmer/gxe/data/ukb_chr_{chrom}", ind_id=mt.s)
+hl.export_plink(mt, f"/well/lindgren/UKBIOBANK/dpalmer/gxe/data/ukb_chr_{chrom}", ind_id=mt.s)
